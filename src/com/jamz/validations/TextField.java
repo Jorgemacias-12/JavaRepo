@@ -17,7 +17,7 @@ public class TextField {
     public static int ONLY_NUMBERS = 0;
     public static int ONLY_WORDS = 1;
     
-    private final char[] specialCharacters;
+    private static char[] specialCharacters;
     
     public TextField() {
         this.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', 
@@ -33,6 +33,17 @@ public class TextField {
     public static void ValidateFieldInput(int option, java.awt.event.KeyEvent evt){
         switch(option){
             case 0:
+                if(Character.isLetter(evt.getKeyChar())){
+                    evt.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }else{
+                    for (char tempChar : specialCharacters) {
+                        if(evt.getKeyChar() == tempChar){
+                            evt.consume();
+                            Toolkit.getDefaultToolkit().beep();
+                        }
+                    }
+                }
                 break;
             case 1:
                 if(Character.isDigit(evt.getKeyChar())){
