@@ -1,19 +1,18 @@
 package com.jamz.validations;
 
-import javax.swing.JTextField;
+/**
+ * -------------------------------------------
+ *
+ * @author: JAMZ  *
+ * File: TextField.java Date: 3/09/2020 Time: 10:18:41 AM
+ *
+ * Purpose: Esta clase  *
+ *
+ * -------------------------------------------
+ */
+public class TextField {
 
-/** -------------------------------------------
-        @author: JAMZ    
-
-        File: TextField.java
-        Date: 3/09/2020 
-        Time: 10:18:41 AM
-        
-        Purpose:
-
-   
-    -------------------------------------------*/  
-
-public class TextField extends JTextField{
+    char[] specialCharacters = {'°', '|', '!', '"', '#', '$', '%', '&', '/', '(', ')', '=', '\'',
+        '?', '¿', '¡', '¨', '*', '´', '+', '{', '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
 
 }
