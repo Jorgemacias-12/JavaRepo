@@ -14,11 +14,20 @@ import java.awt.Toolkit;
  */
 public class TextField {
 
+    /**
+     * Indica que solo se deben introducir numeros.
+     */
     public static int ONLY_NUMBERS = 0;
+    /**
+     * Indica que solo se deben introducir letras.
+     */
     public static int ONLY_WORDS = 1;
     
     private static char[] specialCharacters;
     
+    /**
+     * Constructor de la clase.
+     */
     public TextField() {
         TextField.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', 
         '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{',
