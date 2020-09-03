@@ -66,4 +66,11 @@ public class TextField {
         }
     }
     
+    /**
+     * @param characters Cuantos caracteres se pueden introducir en el campo
+     * de texto.
+     */
+    public static void LimitInput(int characters){
+        
+    }
 }
