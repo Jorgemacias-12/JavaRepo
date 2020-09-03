@@ -1,5 +1,7 @@
 package com.jamz.validations;
 
+import java.awt.Toolkit;
+
 /**
  * -------------------------------------------
  *
@@ -23,12 +25,19 @@ public class TextField {
     
     /**
      * 
-     * @param option Validación que se llevara a cabo.
+     * @param option Tipo validación que se llevara a cabo.
      * @param evt Evento del componente
      */
     public static void ValidateFieldInput(int option, java.awt.event.KeyEvent evt){
         switch(option){
-            
+            case 0:
+                break;
+            case 1:
+                if(Character.isDigit(evt.getKeyChar())){
+                    evt.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }
+                break;
         }
     }
     
