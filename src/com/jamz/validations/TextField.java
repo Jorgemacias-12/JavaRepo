@@ -8,7 +8,7 @@ import java.awt.Toolkit;
  * @author: JAMZ  *
  * File: TextField.java Date: 3/09/2020 Time: 10:18:41 AM
  *
- * Purpose: Esta clase  *
+ * Purpose: Esta clase nos permite validar la entrada del usuario.
  *
  * -------------------------------------------
  */
@@ -20,7 +20,9 @@ public class TextField {
     private final char[] specialCharacters;
     
     public TextField() {
-        this.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{', '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
+        this.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', 
+        '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{',
+        '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
     }
     
     /**
