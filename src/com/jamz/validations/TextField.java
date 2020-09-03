@@ -12,7 +12,10 @@ package com.jamz.validations;
  */
 public class TextField {
 
-    char[] specialCharacters = {'°', '|', '!', '"', '#', '$', '%', '&', '/', '(', ')', '=', '\'',
+    public int ONLY_NUMBERS = 0;
+    public int ONLY_WORDS = 1;
+    
+    private char[] specialCharacters = {'°', '|', '!', '"', '#', '$', '%', '&', '/', '(', ')', '=', '\'',
         '?', '¿', '¡', '¨', '*', '´', '+', '{', '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
-
+    
 }
