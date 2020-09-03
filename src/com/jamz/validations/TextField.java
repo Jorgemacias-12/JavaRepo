@@ -12,10 +12,22 @@ package com.jamz.validations;
  */
 public class TextField {
 
-    public int ONLY_NUMBERS = 0;
-    public int ONLY_WORDS = 1;
+    public static int ONLY_NUMBERS = 0;
+    public static int ONLY_WORDS = 1;
     
     private char[] specialCharacters = {'°', '|', '!', '"', '#', '$', '%', '&', '/', '(', ')', '=', '\'',
         '?', '¿', '¡', '¨', '*', '´', '+', '{', '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
+    
+    
+    /**
+     * 
+     * @param option Validación que se llevara a cabo.
+     * @param evt Evento del componente
+     */
+    public static void ValidateFieldInput(int option, java.awt.event.KeyEvent evt){
+        switch(option){
+            
+        }
+    }
     
 }
