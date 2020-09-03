@@ -20,10 +20,19 @@ import javax.swing.Timer;
     -------------------------------------------*/  
 
 public class SplashScreen extends JFrame{
-   
+    /**
+     *  Variable que contiene el progreso.
+     */
     private static int tempCounter = 0;
+    /**
+     * Contador de progreso.
+     */
     private static Timer timer;
-    
+    /**
+     * 
+     * @param progress componente al que sera aplicado el comportamiento.
+     * @param paintProgress permite pintar el progreso en el componente anterior.
+     */
     public static void initApplication(JProgressBar progress, boolean paintProgress){
         ActionListener ac = (ActionListener) ->{
             if(paintProgress){
