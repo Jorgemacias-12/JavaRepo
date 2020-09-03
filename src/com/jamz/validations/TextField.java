@@ -23,7 +23,10 @@ public class TextField {
      */
     public static int ONLY_WORDS = 1;
     
-    private static char[] specialCharacters;
+    private static char[] specialCharacters = 
+        {'°', '|', '!', '"', '#', '$', '%', 
+        '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{',
+        '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_','@'};;
     
     /**
      * Constructor de la clase.
@@ -47,7 +50,7 @@ public class TextField {
                     Toolkit.getDefaultToolkit().beep();
                 }else{
                     for (char tempChar : specialCharacters) {
-                        if(evt.getKeyChar() == tempChar){
+                        if(tempChar == evt.getKeyChar()){
                             evt.consume();
                             Toolkit.getDefaultToolkit().beep();
                         }
