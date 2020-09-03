@@ -97,6 +97,7 @@ public class FrameTestV extends javax.swing.JFrame {
 
     private void jTextField2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField2KeyTyped
       TextField.ValidateFieldInput(TextField.ONLY_NUMBERS, evt);
+      TextField.LimitInput(10, jTextField2, evt);
     }//GEN-LAST:event_jTextField2KeyTyped
 
     /**
