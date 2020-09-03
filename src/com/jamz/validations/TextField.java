@@ -1,6 +1,7 @@
 package com.jamz.validations;
 
 import java.awt.Toolkit;
+import javax.swing.JTextField;
 
 /**
  * -------------------------------------------
@@ -67,10 +68,15 @@ public class TextField {
     }
     
     /**
-     * @param characters Cuantos caracteres se pueden introducir en el campo
+     * @param limit Cuantos caracteres se pueden introducir en el campo
      * de texto.
+     * @param field campo de texto a limitar.
+     * @param evt Evento del campo de texto a limitar.
      */
-    public static void LimitInput(int characters){
-        
+    public static void LimitInput(int limit, JTextField field, java.awt.event.KeyEvent evt){
+        if(field.getText().length() >= limit){
+            evt.consume();
+            Toolkit.getDefaultToolkit().beep();
+        }
     }
 }
