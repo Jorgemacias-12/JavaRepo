@@ -20,13 +20,13 @@ public class TextField {
     private static char[] specialCharacters;
     
     public TextField() {
-        this.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', 
+        TextField.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', 
         '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{',
-        '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
+        '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_','@'};
     }
     
     /**
-     * 
+     *
      * @param option Tipo validación que se llevara a cabo.
      * @param evt Evento del componente
      */
