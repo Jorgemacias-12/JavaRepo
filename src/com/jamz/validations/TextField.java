@@ -23,6 +23,11 @@ public class TextField {
      * Indica que solo se deben introducir letras.
      */
     public static int ONLY_WORDS = 1;
+    /**
+     * Indica que se pueden introducir letras y/o caracteres
+     * especiales.
+     */
+    public static int ONLY_WORDS_WITH_SPECIAL_CHARACTERS = 2;
     
     private static char[] specialCharacters = 
         {'°', '|', '!', '"', '#', '$', '%', 
@@ -59,6 +64,19 @@ public class TextField {
                 }
                 break;
             case 1:
+                if(Character.isDigit(evt.getKeyChar())){
+                    evt.consume();
+                    Toolkit.getDefaultToolkit().beep();
+                }else{
+                    for(char tempChar : specialCharacters){
+                        if(tempChar == evt.getKeyChar()){
+                            evt.consume();
+                            Toolkit.getDefaultToolkit().beep();
+                        }
+                    }
+                }
+                break;
+            case 2: 
                 if(Character.isDigit(evt.getKeyChar())){
                     evt.consume();
                     Toolkit.getDefaultToolkit().beep();
