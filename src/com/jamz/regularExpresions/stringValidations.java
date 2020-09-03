@@ -7,11 +7,12 @@ package com.jamz.regularExpresions;
         Date: 3/09/2020 
         Time: 04:09:03 PM
         
-        Purpose:
+        Purpose: validar la entrada del usuario
+        * dependiendo del método requerido.
 
    
     -------------------------------------------*/  
 
 public class stringValidations {
-
+    
 }
