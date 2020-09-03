@@ -15,9 +15,11 @@ public class TextField {
     public static int ONLY_NUMBERS = 0;
     public static int ONLY_WORDS = 1;
     
-    private char[] specialCharacters = {'°', '|', '!', '"', '#', '$', '%', '&', '/', '(', ')', '=', '\'',
-        '?', '¿', '¡', '¨', '*', '´', '+', '{', '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
+    private final char[] specialCharacters;
     
+    public TextField() {
+        this.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{', '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_'};
+    }
     
     /**
      * 
