@@ -22,6 +22,13 @@ import javax.swing.ImageIcon;
 
 public class reScale {
     
+    /**
+     * 
+     * @param file   archivo (imagen)
+     * @param width  nuevo ancho
+     * @param height nuevo alto
+     * @return ImageIcon redimensionado 
+     */
     public static ImageIcon scaleImg(File file, int width, int height){
         try {
             Image image = ImageIO.read(file);
