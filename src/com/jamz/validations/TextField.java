@@ -39,9 +39,7 @@ public class TextField {
      * Constructor de la clase.
      */
     public TextField() {
-        TextField.specialCharacters = new char[]{'°', '|', '!', '"', '#', '$', '%', 
-        '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{',
-        '}', '[', ']', '^', '`', '~', '\\', ',', ';', '.', ':', '-', '_','@'};
+        
     }
     
     /**
