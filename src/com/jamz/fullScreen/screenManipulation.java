@@ -14,11 +14,11 @@ import javax.swing.JFrame;
 
 */
 
-public class screenManiputaltion {
+public class screenManipulation {
     
     private final GraphicsDevice device;
     
-    public screenManiputaltion()
+    public screenManipulation()
     {
         device = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     }
