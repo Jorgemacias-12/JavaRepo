@@ -16,7 +16,7 @@ import javax.swing.JFrame;
 
 public class screenManiputaltion {
     
-    private GraphicsDevice device;
+    private final GraphicsDevice device;
     
     public screenManiputaltion()
     {
