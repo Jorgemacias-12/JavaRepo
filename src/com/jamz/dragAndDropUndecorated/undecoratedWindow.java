@@ -17,14 +17,18 @@ public class undecoratedWindow {
     int newXpos;
     int newYpos;
     
-    public static void mouseDragged()
+    public void mouseDragged(java.awt.event.MouseEvent evt)
     {
-        
+        oldXpos = evt.getX();
+        oldYpos = evt.getY();
     }
     
-    public static void mousePressed()
+    public void mousePressed(javax.swing.JFrame frame, java.awt.
+    event.MouseEvent evt)
     {
-        
+        newXpos = evt.getXOnScreen();
+        newYpos = evt.getYOnScreen();
+        frame.setLocation(newXpos - oldXpos, newYpos - oldYpos);
     }
     
 }
