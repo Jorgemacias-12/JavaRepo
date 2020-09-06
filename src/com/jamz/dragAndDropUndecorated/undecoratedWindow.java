@@ -17,4 +17,14 @@ public class undecoratedWindow {
     int newXpos;
     int newYpos;
     
+    public static void mouseDragged()
+    {
+        
+    }
+    
+    public static void mousePressed()
+    {
+        
+    }
+    
 }
