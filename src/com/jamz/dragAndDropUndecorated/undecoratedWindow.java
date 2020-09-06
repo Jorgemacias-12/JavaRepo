@@ -14,12 +14,28 @@ import javax.swing.JFrame;
 */
 
 public class undecoratedWindow {
-    
+    /**
+     * Posicion en X antes de mover el frame.
+    */
     int oldXpos;
+    /**
+     * Posicion en Y antes de mover el frame.
+     */
     int oldYpos;
+    /**
+     * Nueva posicion en X.
+    */
     int newXpos;
+    /**
+     * Nueva posicion en Y.
+     */
     int newYpos;
     
+    /**
+     * 
+     * @param frame Ventana que se va a mover.
+     * @param evt Evento de mouse.
+     */
     public void mouseDragged(JFrame frame, MouseEvent evt)
     {
         newXpos = evt.getXOnScreen();
@@ -27,6 +43,10 @@ public class undecoratedWindow {
         frame.setLocation(newXpos - oldXpos, newYpos - oldYpos);
     }
     
+    /**
+     * 
+     * @param evt Evento de mouse.
+     */
     public void mousePressed(MouseEvent evt)
     {
         oldXpos = evt.getX();
