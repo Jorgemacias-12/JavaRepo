@@ -12,4 +12,9 @@ package com.jamz.dragAndDropUndecorated;
 
 public class undecoratedWindow {
     
+    int oldXpos;
+    int oldYpos;
+    int newXpos;
+    int newYpos;
+    
 }
