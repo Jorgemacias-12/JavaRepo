@@ -1,5 +1,9 @@
 package com.jamz.fullScreen;
 
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import javax.swing.JFrame;
+
 /**
     @author: Jorge Antonio Macias Zambrano
     File: screenManiputaltion.java
@@ -11,5 +15,25 @@ package com.jamz.fullScreen;
 */
 
 public class screenManiputaltion {
-
+    
+    private GraphicsDevice device;
+    
+    public screenManiputaltion()
+    {
+        device = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+    }
+    
+    public void setFullScreen(boolean isFullScreenAllowed, JFrame frame)
+    {
+        if(isFullScreenAllowed && device.isFullScreenSupported())
+        {
+            device.setFullScreenWindow(frame);
+        }
+        else
+        {
+            device.setFullScreenWindow(null);
+        }
+    }
+    
+    
 }
