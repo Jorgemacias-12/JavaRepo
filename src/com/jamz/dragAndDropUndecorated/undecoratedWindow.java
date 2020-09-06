@@ -1,5 +1,8 @@
 package com.jamz.dragAndDropUndecorated;
 
+import java.awt.event.MouseEvent;
+import javax.swing.JFrame;
+
 /**
     @author: Jorge Antonio Macias Zambrano
     File: undecoratedWindow.java
@@ -17,18 +20,17 @@ public class undecoratedWindow {
     int newXpos;
     int newYpos;
     
-    public void mouseDragged(java.awt.event.MouseEvent evt)
-    {
-        oldXpos = evt.getX();
-        oldYpos = evt.getY();
-    }
-    
-    public void mousePressed(javax.swing.JFrame frame, java.awt.
-    event.MouseEvent evt)
+    public void mouseDragged(JFrame frame, MouseEvent evt)
     {
         newXpos = evt.getXOnScreen();
         newYpos = evt.getYOnScreen();
         frame.setLocation(newXpos - oldXpos, newYpos - oldYpos);
+    }
+    
+    public void mousePressed(MouseEvent evt)
+    {
+        oldXpos = evt.getX();
+        oldYpos = evt.getY();
     }
     
 }
