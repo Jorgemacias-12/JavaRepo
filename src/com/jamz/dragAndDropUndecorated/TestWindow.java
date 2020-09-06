@@ -96,11 +96,11 @@ public class TestWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void formMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseDragged
-        instanceUW.mouseDragged(evt);
+        instanceUW.mouseDragged(this, evt);
     }//GEN-LAST:event_formMouseDragged
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
-        instanceUW.mousePressed(this, evt);
+       instanceUW.mousePressed(evt);
     }//GEN-LAST:event_formMousePressed
 
     /**
