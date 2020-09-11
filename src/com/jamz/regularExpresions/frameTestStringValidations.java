@@ -1,8 +1,6 @@
 
 package com.jamz.regularExpresions;
 
-import java.awt.Color;
-
 /** -------------------------------------------
         @author: JAMZ    
 
@@ -67,12 +65,13 @@ public class frameTestStringValidations extends javax.swing.JFrame {
             .addGroup(PanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(isValidCURP, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1)
-                    .addComponent(txt_CURP))
+                    .addComponent(isValidCURP, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(PanelLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(28, 28, 28)
+                        .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1)
+                            .addComponent(txt_CURP))))
                 .addContainerGap())
         );
         PanelLayout.setVerticalGroup(
@@ -83,12 +82,10 @@ public class frameTestStringValidations extends javax.swing.JFrame {
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txt_CURP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(PanelLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(isValidCURP, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 221, Short.MAX_VALUE))
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(isValidCURP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 214, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -106,7 +103,10 @@ public class frameTestStringValidations extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_CURPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_CURPKeyTyped
-        if(stringValidations.ValidateCURP(txt_CURP.getText()))
+       
+        
+        /*
+            if(stringValidations.ValidateCURP(txt_CURP.getText()) == true)
         {
             isValidCURP.setForeground(Color.green);
             isValidCURP.setText("La curp ingresada es valida.");
@@ -116,6 +116,7 @@ public class frameTestStringValidations extends javax.swing.JFrame {
             isValidCURP.setForeground(Color.red);
             isValidCURP.setText("La entrada del usuario no es un CURP valido.");
         }
+        */
     }//GEN-LAST:event_txt_CURPKeyTyped
 
     /**
