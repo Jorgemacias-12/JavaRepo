@@ -50,14 +50,20 @@ public class TextField {
      * @param evt Evento del componente
      */
     public static void ValidateFieldInput(int option, java.awt.event.KeyEvent evt){
-        switch(option){
+        switch(option)
+        {
             case 0:
-                if(Character.isLetter(evt.getKeyChar())){
+                if(Character.isLetter(evt.getKeyChar()))
+                {
                     evt.consume();
                     Toolkit.getDefaultToolkit().beep();
-                }else{
-                    for (char tempChar : specialCharacters) {
-                        if(tempChar == evt.getKeyChar()){
+                }
+                else
+                {
+                    for (char tempChar : specialCharacters)
+                    {
+                        if(tempChar == evt.getKeyChar())
+                        {
                             evt.consume();
                             Toolkit.getDefaultToolkit().beep();
                         }
@@ -65,12 +71,17 @@ public class TextField {
                 }
                 break;
             case 1:
-                if(Character.isDigit(evt.getKeyChar())){
+                if(Character.isDigit(evt.getKeyChar()))
+                {
                     evt.consume();
                     Toolkit.getDefaultToolkit().beep();
-                }else{
-                    for(char tempChar : specialCharacters){
-                        if(tempChar == evt.getKeyChar()){
+                }
+                else
+                {
+                    for(char tempChar : specialCharacters)
+                    {
+                        if(tempChar == evt.getKeyChar())
+                        {
                             evt.consume();
                             Toolkit.getDefaultToolkit().beep();
                         }
@@ -78,7 +89,8 @@ public class TextField {
                 }
                 break;
             case 2: 
-                if(Character.isDigit(evt.getKeyChar())){
+                if(Character.isDigit(evt.getKeyChar()))
+                {
                     evt.consume();
                     Toolkit.getDefaultToolkit().beep();
                 }
