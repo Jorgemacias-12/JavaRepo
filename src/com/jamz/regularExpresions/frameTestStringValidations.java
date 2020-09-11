@@ -37,7 +37,7 @@ public class frameTestStringValidations extends javax.swing.JFrame {
         Panel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txt_CURP = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,10 +49,10 @@ public class frameTestStringValidations extends javax.swing.JFrame {
 
         jLabel2.setText("CURP:");
 
-        jTextField1.setBorder(null);
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+        txt_CURP.setBorder(null);
+        txt_CURP.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                jTextField1KeyTyped(evt);
+                txt_CURPKeyTyped(evt);
             }
         });
 
@@ -67,7 +67,7 @@ public class frameTestStringValidations extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jSeparator1)
-                    .addComponent(jTextField1))
+                    .addComponent(txt_CURP))
                 .addContainerGap())
         );
         PanelLayout.setVerticalGroup(
@@ -77,7 +77,7 @@ public class frameTestStringValidations extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_CURP, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 244, Short.MAX_VALUE))
@@ -97,9 +97,9 @@ public class frameTestStringValidations extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1KeyTyped
+    private void txt_CURPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_CURPKeyTyped
+        
+    }//GEN-LAST:event_txt_CURPKeyTyped
 
     /**
      * @param args the command line arguments
@@ -150,7 +150,7 @@ public class frameTestStringValidations extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txt_CURP;
     // End of variables declaration//GEN-END:variables
 
 }
