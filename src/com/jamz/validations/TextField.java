@@ -29,6 +29,8 @@ public class TextField {
      */
     public static int ONLY_WORDS_WITH_SPECIAL_CHARACTERS = 2;
     
+    public static int WORDS_AND_NUMBERS_WITHOUT_SPECIAL_CHARACTERS = 3;
+    
     private static char[] specialCharacters = 
         {'°', '|', '!', '"', '#', '$', '%', 
         '&', '/', '(', ')', '=', '\'', '?', '¿', '¡', '¨', '*', '´', '+', '{',
