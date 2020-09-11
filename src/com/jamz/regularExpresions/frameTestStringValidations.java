@@ -1,6 +1,8 @@
 
 package com.jamz.regularExpresions;
 
+import java.awt.Color;
+
 /** -------------------------------------------
         @author: JAMZ    
 
@@ -16,8 +18,6 @@ package com.jamz.regularExpresions;
 public class frameTestStringValidations extends javax.swing.JFrame {
 
     /** Creates new form frameTestStringValidations */
-
-    private stringValidations instanceSV = new stringValidations();
     
     public frameTestStringValidations() {
         initComponents();
@@ -106,7 +106,16 @@ public class frameTestStringValidations extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_CURPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_CURPKeyTyped
-        
+        if(stringValidations.ValidateCURP(txt_CURP.getText()))
+        {
+            isValidCURP.setForeground(Color.green);
+            isValidCURP.setText("La curp ingresada es valida.");
+        }
+        else
+        {
+            isValidCURP.setForeground(Color.red);
+            isValidCURP.setText("La entrada del usuario no es un CURP valido.");
+        }
     }//GEN-LAST:event_txt_CURPKeyTyped
 
     /**
