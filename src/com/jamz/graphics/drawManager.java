@@ -34,6 +34,7 @@ public class drawManager extends JPanel{
         int[] xPoints = {500,550,450};
         int[] yPoints = {70,120,120};
         g.drawPolygon(xPoints, yPoints, 3);
+        g.drawString("El día que te conocí, fue el mejor xd.", 500, 30);
     }
     
 }
