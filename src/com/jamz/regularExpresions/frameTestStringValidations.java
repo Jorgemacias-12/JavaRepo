@@ -2,6 +2,7 @@
 package com.jamz.regularExpresions;
 
 import com.jamz.validations.TextField;
+import java.awt.Color;
 
 /** -------------------------------------------
         @author: JAMZ    
@@ -54,6 +55,9 @@ public class frameTestStringValidations extends javax.swing.JFrame {
 
         txt_CURP.setBorder(null);
         txt_CURP.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_CURPKeyReleased(evt);
+            }
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_CURPKeyTyped(evt);
             }
@@ -108,6 +112,24 @@ public class frameTestStringValidations extends javax.swing.JFrame {
         TextField.LimitInput(18, txt_CURP, evt);
         TextField.ValidateFieldInput(TextField.WORDS_AND_NUMBERS_WITHOUT_SPECIAL_CHARACTERS, evt);
     }//GEN-LAST:event_txt_CURPKeyTyped
+
+    private void txt_CURPKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_CURPKeyReleased
+       if(txt_CURP.getText().isEmpty())
+       {
+           isValidCURP.setForeground(Color.red);
+           isValidCURP.setText("El campo esta vació.");
+       }
+       else if(!txt_CURP.getText().isEmpty() && stringValidations.ValidateCURP(txt_CURP.getText()))
+       {
+           isValidCURP.setForeground(Color.green);
+           isValidCURP.setText("CURP Valida.");
+       }
+       else
+       {
+           isValidCURP.setForeground(Color.red);
+           isValidCURP.setText("La curp introducida no es valida.");
+       }
+    }//GEN-LAST:event_txt_CURPKeyReleased
 
     /**
      * @param args the command line arguments
