@@ -95,6 +95,15 @@ public class TextField {
                     Toolkit.getDefaultToolkit().beep();
                 }
                 break;
+            case 3:
+                for(char tempChar : specialCharacters)
+                {
+                    if(tempChar == evt.getKeyChar())
+                    {
+                        evt.consume();
+                        Toolkit.getDefaultToolkit().beep();
+                    }
+                }
         }
     }
     
