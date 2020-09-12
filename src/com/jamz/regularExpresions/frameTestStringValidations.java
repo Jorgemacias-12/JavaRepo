@@ -1,6 +1,8 @@
 
 package com.jamz.regularExpresions;
 
+import com.jamz.validations.TextField;
+
 /** -------------------------------------------
         @author: JAMZ    
 
@@ -103,20 +105,8 @@ public class frameTestStringValidations extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_CURPKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_CURPKeyTyped
-       
-        
-        /*
-            if(stringValidations.ValidateCURP(txt_CURP.getText()) == true)
-        {
-            isValidCURP.setForeground(Color.green);
-            isValidCURP.setText("La curp ingresada es valida.");
-        }
-        else
-        {
-            isValidCURP.setForeground(Color.red);
-            isValidCURP.setText("La entrada del usuario no es un CURP valido.");
-        }
-        */
+        TextField.LimitInput(18, txt_CURP, evt);
+        TextField.ValidateFieldInput(TextField.WORDS_AND_NUMBERS_WITHOUT_SPECIAL_CHARACTERS, evt);
     }//GEN-LAST:event_txt_CURPKeyTyped
 
     /**
