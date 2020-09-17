@@ -44,7 +44,13 @@ public class TextField {
     public TextField() {
         
     }
-    
+    /**
+     * 
+     * @param typeOfValidation Tipo de validación se va a hacer.
+     * @param evt evento del componente a validar.
+     * @param CharacterLimit Limite de letras y/o números limite.
+     * @param inputField Componente que se validará.
+     */
     public static void ValidateAndLimitField(int typeOfValidation, KeyEvent evt
     , int CharacterLimit, JTextField inputField)
     {
