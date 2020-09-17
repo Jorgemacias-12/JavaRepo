@@ -1,6 +1,7 @@
 package com.jamz.validations;
 
 import java.awt.Toolkit;
+import java.awt.event.KeyEvent;
 import javax.swing.JTextField;
 
 /**
@@ -42,6 +43,13 @@ public class TextField {
      */
     public TextField() {
         
+    }
+    
+    public static void ValidateAndLimitField(int typeOfValidation, KeyEvent evt
+    , int CharacterLimit, JTextField inputField)
+    {
+        ValidateFieldInput(typeOfValidation, evt);
+        LimitInput(CharacterLimit, inputField, evt);
     }
     
     /**
