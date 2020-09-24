@@ -39,4 +39,17 @@ public class reScale {
         }
     }
     
+    public static ImageIcon[] scaleImgArray(File[] files, int Width, int Height) {
+        try {
+            Image[] images = new Image[files.length];
+            for(int i = 0; i <= files.length; i++)
+            {
+                images[i] = ImageIO.read(files[i]);
+                
+            }
+        } catch (IOException e) {
+            return null;
+        }
+    }
+    
 }
