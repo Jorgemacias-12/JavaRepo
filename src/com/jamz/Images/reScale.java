@@ -1,26 +1,33 @@
 package com.jamz.Images;
 
-/** -------------------------------------------
-        @author: JAMZ    
+/**
+ * This class can resize Images
+ * 
+ */
 
-        File: reScale.java
-        Date: 4/09/2020 
-        Time: 09:34:59 AM
-        
-        Purpose: redimensionar imagenes.
-
-   
-    -------------------------------------------*/  
-
-public class reScale {
+public class reScale
+{
     
     /**
-     * 
-     * @param file   archivo (imagen)
-     * @param width  nuevo ancho
-     * @param height nuevo alto
-     * @return ImageIcon redimensionado 
+     * Class variables.
      */
     
+    private int Width;
+    private int Height;
+    
+    /**
+     * Classes constructors.
+     */
+    public reScale()
+    {
+        Width = 0;
+        Height = 0;
+    }
+    
+    public reScale(int inputWidth, int inputHeight)
+    {
+        Width = inputWidth;
+        Height = inputHeight;
+    }
     
 }
