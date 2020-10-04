@@ -1,13 +1,5 @@
 package com.jamz.Images;
 
-import java.awt.Image;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.swing.ImageIcon;
-
 /** -------------------------------------------
         @author: JAMZ    
 
@@ -29,27 +21,6 @@ public class reScale {
      * @param height nuevo alto
      * @return ImageIcon redimensionado 
      */
-    public static ImageIcon scaleImg(File file, int width, int height){
-        try {
-            Image image = ImageIO.read(file);
-            return new ImageIcon(image.getScaledInstance(width, height, Image.SCALE_SMOOTH));
-        } catch (IOException ex) {
-            Logger.getLogger(reScale.class.getName()).log(Level.SEVERE, null, ex);
-            return null;
-        }
-    }
     
-    public static ImageIcon[] scaleImgArray(File[] files, int Width, int Height) {
-        try {
-            Image[] images = new Image[files.length];
-            for(int i = 0; i <= files.length; i++)
-            {
-                images[i] = ImageIO.read(files[i]);
-                
-            }
-        } catch (IOException e) {
-            return null;
-        }
-    }
     
 }
