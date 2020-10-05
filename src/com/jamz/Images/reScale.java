@@ -64,7 +64,7 @@ public class reScale
             try 
             {
                 images[counter] = ImageIO.read(files[counter]);
-                ImageIcon[] tempImages = new ImageIcon[4];
+                ImageIcon[] tempImages = new ImageIcon[files.length];
                 tempImages[counter] = new ImageIcon(images[counter].getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH));
                 return tempImages;
             } 
