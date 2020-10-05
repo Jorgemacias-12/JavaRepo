@@ -33,7 +33,7 @@ public class reScale
     /*
         Public non static methods.
     */
-    
+   
     /**
      * This function allow to resize an ImageIcon, using a file object how
      * to input.
@@ -52,6 +52,26 @@ public class reScale
         catch (IOException ex) 
         {
             Logger.getLogger(reScale.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    public ImageIcon[] scaleImagesIcons(File[] files, int newWidth, int newHeight)
+    {
+        Image[] images = new Image[files.length];
+        for(int counter = 0; counter <= files.length; counter++)
+        {
+            try 
+            {
+                images[counter] = ImageIO.read(files[counter]);
+                ImageIcon[] tempImages = new ImageIcon[4];
+                tempImages[counter] = new ImageIcon(images[counter].getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH));
+                return tempImages;
+            } 
+            catch (IOException ex) 
+            {
+                Logger.getLogger(reScale.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         return null;
     }
