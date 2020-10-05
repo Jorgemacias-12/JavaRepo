@@ -80,4 +80,17 @@ public class reScale
         Public static methods.
     */
     
+    public static ImageIcon scaleImage(File file, int newWidth, int newHeight)
+    {
+        try
+        {
+            Image image = ImageIO.read(file);
+            return new ImageIcon(image.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH));
+        }
+        catch(IOException ex)
+        {
+            Logger.getLogger(reScale.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
 }
