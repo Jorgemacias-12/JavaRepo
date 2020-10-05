@@ -1,7 +1,12 @@
 
 package com.jamz.Images;
 
+import java.awt.Color;
+import java.io.File;
+import javax.swing.BorderFactory;
+import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 /** -------------------------------------------
@@ -23,6 +28,9 @@ public class FrameTest extends javax.swing.JFrame {
     private final reScale instance = new reScale();
     private JFileChooser fileChooser;
     private final FileNameExtensionFilter filter;
+    private JLabel[] imagesContainer;
+    private ImageIcon[] images;
+    private File[] files;
     
     public FrameTest() {
         filter = new FileNameExtensionFilter("Images","png","jpg");
@@ -47,6 +55,9 @@ public class FrameTest extends javax.swing.JFrame {
         btn_open = new javax.swing.JButton();
         img = new javax.swing.JLabel();
         Panel2 = new javax.swing.JPanel();
+        btn_add = new javax.swing.JButton();
+        scrollPane = new javax.swing.JScrollPane();
+        container = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,15 +98,38 @@ public class FrameTest extends javax.swing.JFrame {
 
         Panel2.setBackground(new java.awt.Color(255, 255, 255));
 
+        btn_add.setText("Seleccionar imagenes");
+        btn_add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_addActionPerformed(evt);
+            }
+        });
+
+        container.setBackground(new java.awt.Color(255, 255, 255));
+        container.setLayout(new java.awt.GridLayout());
+        scrollPane.setViewportView(container);
+
         javax.swing.GroupLayout Panel2Layout = new javax.swing.GroupLayout(Panel2);
         Panel2.setLayout(Panel2Layout);
         Panel2Layout.setHorizontalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 684, Short.MAX_VALUE)
+            .addGroup(Panel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrollPane)
+                    .addGroup(Panel2Layout.createSequentialGroup()
+                        .addComponent(btn_add)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         Panel2Layout.setVerticalGroup(
             Panel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 393, Short.MAX_VALUE)
+            .addGroup(Panel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btn_add)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scrollPane)
+                .addContainerGap())
         );
 
         Tabed.addTab("Redimensionar varias imagenes", Panel2);
@@ -123,6 +157,31 @@ public class FrameTest extends javax.swing.JFrame {
            img.setIcon(instance.scaleImageIcon(fileChooser.getSelectedFile(),img.getWidth(),img.getHeight()));
        }
     }//GEN-LAST:event_btn_openActionPerformed
+
+    private void btn_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_addActionPerformed
+       fileChooser = new JFileChooser();
+       fileChooser.setDialogTitle("Select a image file");
+       fileChooser.setMultiSelectionEnabled(true);
+       fileChooser.setFileFilter(filter);
+       if(fileChooser.showOpenDialog(this) == JFileChooser.APPROVE_OPTION)
+       {
+           files = new File[fileChooser.getSelectedFiles().length];
+           int cantFiles = files.length;
+           images = new ImageIcon[cantFiles];
+           for(int i = 0; i <= cantFiles - 1; i++)
+           {
+               files = fileChooser.getSelectedFiles();
+               imagesContainer = new JLabel[cantFiles];
+               imagesContainer[i] = new JLabel();
+               imagesContainer[i].setBorder(BorderFactory.createLineBorder(Color.BLACK));
+               images[i] = new ImageIcon();
+               images[i] = instance.scaleImagesIcons(files, 128, 128)[i];
+               imagesContainer[i].setIcon(images[i]);
+               container.add(imagesContainer[i]);
+               container.updateUI();
+           }
+       }
+    }//GEN-LAST:event_btn_addActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,8 +231,11 @@ public class FrameTest extends javax.swing.JFrame {
     private javax.swing.JPanel Panel;
     private javax.swing.JPanel Panel2;
     private javax.swing.JTabbedPane Tabed;
+    private javax.swing.JButton btn_add;
     private javax.swing.JButton btn_open;
+    private javax.swing.JPanel container;
     private javax.swing.JLabel img;
+    private javax.swing.JScrollPane scrollPane;
     // End of variables declaration//GEN-END:variables
 
 }
